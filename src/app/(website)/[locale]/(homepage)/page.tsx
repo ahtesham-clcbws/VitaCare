@@ -1,9 +1,9 @@
-import HeroSection from '@/components/HomePage/HeroSection';
 import React from 'react';
 import { Link } from '../../i18n/routing';
 import { getTranslations } from 'next-intl/server';
+import HeroSection from '@/components/HomePage/HeroSection';
 import Services from '@/components/HomePage/Services';
-import AboutUs from '@/components/HomePage/AboutUs';
+import AboutSection from '@/components/HomePage/AboutUs';
 import OurPartners from '@/components/HomePage/OurPartners';
 import WhyChoose from '@/components/HomePage/WhyChoose';
 import FeaturesSection from '@/components/HomePage/FeaturesSection';
@@ -25,11 +25,11 @@ export default async function Homepage() {
             </div>
             <HeroSection />
             <FeaturesSection />
-            <AboutUs />
+            <AboutSection />
             <OurPartners />
             <Services />
             <WhyChoose />
-            <OurTeam />
+            <OurTeam limit={8}/>
             <CallToAction />
             <FAQ />
             <Testimonial />

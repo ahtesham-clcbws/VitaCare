@@ -16,13 +16,12 @@ interface Language {
 
 const navItems = [
   { name: 'Home', href: '/' },
-  { name: 'About Us', href: '/#' },
-  { name: 'Services', href: '/#' },
-  { name: 'Our Partners', href: '/#' },
-  { name: 'Lifelong Learning', href: '/#' },
-  { name: 'Durabilty', href: '/#' },
-  { name: 'Team', href: '/#' },
-  { name: 'Contact', href: '/#' },
+  { name: 'About Us', href: '/about-us' },
+  { name: 'Our Partners', href: '/our-partners' },
+  { name: 'Lifelong Learning', href: '/lifelong-learning' },
+  { name: 'Durabilty', href: '/durabilty' },
+  { name: 'Team', href: '/team' },
+  { name: 'Contact Us', href: '/contact-us' },
 ];
 
 const languages: Language[] = [
@@ -43,6 +42,11 @@ export default function Header() {
   const pathname = usePathname();
   const router = useRouter();
   const currentLocale = useLocale();
+  const [isTransparent, setIsTransparent] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsTransparent(pathname === '/');
+  }, [pathname]);
 
   const handleLanguageChange = (newLang: 'en' | 'nl') => {
     router.push(pathname, { locale: newLang });
@@ -51,10 +55,10 @@ export default function Header() {
   return (
     <>
 
-      <header className="bg-transparent absolute top-0 left-0 w-full z-50">
+      <header className={`${isTransparent ? 'bg-transparent md:absolute md:top-0 md:left-0' : 'bg-white'} w-full z-50`}>
 
-        <div className="hidden container mx-auto md:flex justify-end py-2 text-sm">
-          <div className=" flex items-center gap-4 px-4">
+        <div className="hidden container mx-auto md:flex justify-end pt-2 text-xs">
+          <div className="flex items-center gap-4 px-4">
             <div className="flex items-center gap-2">
               <FaPhoneAlt className="text-primary-500" />
               <span>+31 (0)70 88 77 530</span>
@@ -73,7 +77,7 @@ export default function Header() {
             <FaTwitter className="text-primary-500" />
             <FaLinkedin className="text-primary-500" />
             <Menu>
-              <MenuButton className="inline-flex items-center gap-2 rounded-md bg-transparent py-1 px-3 text-sm font-semibold text-primary-500 shadow-inner border border-gray-50 focus:outline-none  ">
+              <MenuButton className="inline-flex items-center gap-2 rounded-md bg-transparent py-1 px-3 text-sm font-semibold text-primary-500">
                 <span className="mr-1">
                   {languages.find(lang => lang.code === currentLocale)?.emoji}
                 </span>
@@ -102,9 +106,9 @@ export default function Header() {
           </div>
         </div>
 
-        <nav aria-label="Global" className=" mx-auto flex container items-center justify-between py-3 lg:px-6">
+        <nav aria-label="Global" className=" mx-auto flex container items-center justify-between py-2 lg:px-6">
           <div className="flex lg:flex-1">
-            <Link href="#" className="-m-1.5 p-1.5">
+            <Link href="#" className="md:-mt-10 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
                 alt=""
@@ -135,7 +139,7 @@ export default function Header() {
               </Link>
             ))}
             <Link href="#" className="text-sm font-semibold text-white py-2 px-6 bg-primary-500 rounded-full">
-              Enquire
+              Enquire Us
             </Link>
           </div>
 

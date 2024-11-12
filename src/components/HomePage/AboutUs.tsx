@@ -1,33 +1,48 @@
+import { Link } from '@/app/(website)/i18n/routing';
+import Image from 'next/image';
 import React from 'react';
-import { FiUsers } from "react-icons/fi";
+import { FaHeartbeat } from 'react-icons/fa';
+import { BiSolidShieldPlus } from "react-icons/bi";
 
-export default function AboutUs() {
+export default function AboutSection() {
     return (
         <section>
 
-            {/* Features */}
-            <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-                {/* Grid */}
+
+            <div className="container px-4 py-10 sm:px-6 lg:px-8 lg:py-16 mx-auto">
+
                 <div className="md:grid md:grid-cols-2 md:items-center md:gap-6 xl:gap-8">
-                    <div>
-                        <img className="rounded-xl" src="https://images.unsplash.com/photo-1648737963503-1a26da876aca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&h=900&q=80" alt="Features Image" />
+                    <div className="relative flex items-center justify-end">
+                        <Image
+                            className="rounded-full rounded-bl-none justify-center"
+                            src="/img/images/about.jpg"
+                            alt="Features Image"
+                            width={400}
+                            height={400}
+                        />
+                        <div className="absolute -bottom-4 p-5 bg-primary-500 rounded-2xl ">
+                            <FaHeartbeat className="size-14 text-white"/>
+                        </div>
+                        <div className="absolute left-0 lg:left-40 -top-4 p-5 bg-secondary-500 rounded-2xl ">
+                            <BiSolidShieldPlus className="size-14 text-white"/>
+                        </div>
                     </div>
-                    {/* End Col */}
+
 
                     <div className="mt-5 sm:mt-10 lg:mt-0">
                         <div className="space-y-6 sm:space-y-8">
                             <div className="space-y-2 md:space-y-4">
-                            <p className="text-primary-500 text-lg">About Us</p>
-                                <h2 className="font-bold text-3xl lg:text-4xl text-gray-800">
-                                    We tackle the challenges start-ups face
-                                </h2>
+                                <div className="space-y-2 md:space-y-4 max-w-lg">
+                                    <p className="text-primary-500 text-lg">About Us</p>
+                                    <h2 className="font-bold text-3xl lg:text-4xl text-gray-800">
+                                        We tackle the challenges start-ups face
+                                    </h2>
+                                </div>
                                 <p className="text-gray-500">
                                     Besides working with start-up enterprises as a partner for digitalization, we have built enterprise products for common pain points that we have encountered in various products and projects.
                                 </p>
                             </div>
-                            {/* End Title */}
 
-                            {/* List */}
                             <ul className="space-y-2 sm:space-y-4">
                                 <li className="flex gap-x-3">
                                     <span className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600">
@@ -63,17 +78,19 @@ export default function AboutUs() {
                                 </li>
                             </ul>
 
-                            <button className="bg-primary-500 rounded-full text-white px-6 py-3">
-                                Discover More
-                            </button>
+                            <div className="mt-3">
+                                <Link href="/contact-us" className="bg-primary-500 rounded-full text-white px-6 py-3">
+                                    Discover More
+                                </Link>
+                            </div>
 
                         </div>
                     </div>
-                    {/* End Col */}
+
                 </div>
-                {/* End Grid */}
+
             </div>
-            {/* End Features */}
+
 
         </section>
     )

@@ -5,7 +5,7 @@ export default function CallToAction() {
         // bg-[url('/img/background/banner-1.jpg')]
         <section className="bg-primary-800 h-[450px] bg-no-repeat bg-cover">
             <div className="relative container mx-auto md:py-16 py-6">
-                <div className="max-w-4xl">
+                <div className="max-w-4xl space-y-3">
                     <p className="text-primary-500 text-lg">Need a Doctor for Check-up?</p>
                     <h3 className="block text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">
                         Call for an emergency service when you have a need!

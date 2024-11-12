@@ -64,7 +64,7 @@ export default function HeroSection() {
             >
                 {slides.map(slide => (
 
-                    <div key={slide.id} className="container mx-auto px-4 pt-16 md:pt-24 sm:px-6 lg:px-8">
+                    <div key={slide.id} className="container mx-auto px-4 py-16 md:py-24 sm:px-6 lg:px-8">
                         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center z-50">
                             <div className="lg:col-span-3">
                                 <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl">{slide.title}</h1>

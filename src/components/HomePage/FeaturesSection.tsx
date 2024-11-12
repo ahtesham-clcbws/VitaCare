@@ -36,7 +36,7 @@ export default function FeaturesSection() {
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 items-center gap-6">
                         {cardData.map((card, index) => (
                             <div key={index} className="group border border-gray-50 drop-shadow-xl bg-white rounded-2xl text-start p-6">
-                                <div className="flex justify-center items-center size-20 bg-secondary-200 group-hover:bg-primary-200 border border-gray-200 rounded-full">
+                                <div className="flex justify-center items-center size-20 bg-secondary-200 group-hover:bg-primary-500 border border-gray-200 rounded-full">
                                     <card.icon className="size-8 text-secondary-700 group-hover:text-white" />
                                 </div>
                                 <div className="mt-5 space-y-3">

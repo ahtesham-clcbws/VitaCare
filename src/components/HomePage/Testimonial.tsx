@@ -63,8 +63,8 @@ export default function TestimonialSection() {
         <div className="grid grid-cols-1 md:grid-cols-6">
           <div className="md:col-span-3 flex justify-center items-center">
 
-            <div className="relative border border-dashed p-32 border-gray-400 rounded-full">
-              <div className="border border-dashed p-4 border-gray-400 rounded-full flex items-center justify-center">
+            <div className="relative border border-dashed p-32 border-gray-200 rounded-full">
+              <div className="border border-dashed p-4 border-gray-200 rounded-full flex items-center justify-center ">
                 <img
                   src="/img/images/thumb-6.png"
                   alt="Central Testimonial"
