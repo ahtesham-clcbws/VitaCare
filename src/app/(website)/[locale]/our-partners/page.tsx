@@ -31,7 +31,6 @@ export default function OurPartners() {
             <PageHeader />
             <section>
                 <div className="container py-10 lg:py-16">
-                    <h3 className="text-3xl font-bold text-gray-800 sm:text-4xl mb-4">Our Partners</h3>
 
                     <div className="max-w-3xl mx-auto space-y-8">
                         {partners.map((partner, index) => (

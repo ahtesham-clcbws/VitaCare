@@ -72,7 +72,7 @@ export default function HeroSection() {
 
                                 <div className="mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
                                     <a
-                                        className="w-full sm:w-auto py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                                        className="bg-primary-500 rounded-full text-white px-6 py-3"
                                         href={slide.buttonLink}
                                     >
                                         {slide.buttonLabel}

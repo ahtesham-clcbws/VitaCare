@@ -32,9 +32,9 @@ export default function Services() {
             <div className="container px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
 
                 <div className="max-w-2xl text-center mx-auto mb-10 lg:mb-14">
-                <p className="text-primary-500 text-lg">Services</p>
-                    <h2 className="text-2xl font-bold md:text-4xl md:leading-tight">Read our latest news</h2>
-                    <p className="mt-1 text-gray-600">We&apos;ve helped some great companies brand, design and get to market.</p>
+                <p className="text-white text-lg">Services</p>
+                    <h3 className="text-2xl text-white font-bold md:text-4xl md:leading-tight">Read our latest news</h3>
+                    <p className="mt-1 text-gray-50">We&apos;ve helped some great companies brand, design and get to market.</p>
                 </div>
 
 

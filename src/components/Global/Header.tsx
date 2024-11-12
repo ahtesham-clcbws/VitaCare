@@ -19,7 +19,7 @@ const navItems = [
   { name: 'About Us', href: '/about-us' },
   { name: 'Our Partners', href: '/our-partners' },
   { name: 'Lifelong Learning', href: '/lifelong-learning' },
-  { name: 'Durabilty', href: '/durabilty' },
+  { name: 'Sustainability', href: '/sustainability' },
   { name: 'Team', href: '/team' },
   { name: 'Contact Us', href: '/contact-us' },
 ];
@@ -138,7 +138,7 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <Link href="#" className="text-sm font-semibold text-white py-2 px-6 bg-primary-500 rounded-full">
+            <Link href="/contact-us" className="text-sm font-semibold text-white py-2 px-6 bg-primary-500 rounded-full">
               Enquire Us
             </Link>
           </div>
@@ -152,14 +152,14 @@ export default function Header() {
           <div className="fixed inset-0 z-10" />
           <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
+              <Link href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
                 <img
                   alt=""
                   src="/img/VitaCare_Logo-01.png"
                   className="h-8 w-auto"
                 />
-              </a>
+              </Link>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
